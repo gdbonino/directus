@@ -424,6 +424,10 @@ class Auth extends Route
         $responseData = [];
         $urlParams = [];
 
+        // Changes for SF
+        $mode = DirectusUserSessionsTableGateway::TOKEN_COOKIE;
+        $redirectUrl = '/admin/#/sharedflight/collections';
+
         try {
             $responseData = $authService->handleAuthenticationRequestCallback(
                 $request->getAttribute('service'),

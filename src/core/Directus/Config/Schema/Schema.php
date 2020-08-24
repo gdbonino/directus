@@ -156,6 +156,13 @@ class Schema
                         new Value('identifier', Types::STRING, ''),
                         new Value('secret', Types::STRING, ''),
                     ]),
+                    new Group('centralserver?', [
+                        new Value('urlAuthorize', Types::STRING, ''),
+                        new Value('urlAccessToken', Types::STRING, ''),
+                        new Value('urlResourceOwnerDetails', Types::STRING, ''),
+                        new Value('clientId', Types::STRING, ''),
+                        new Value('clientSecret', Types::STRING, ''),
+                    ]),
                 ]),
             ]),
             new Value('ext?', Types::ARRAY, []),
